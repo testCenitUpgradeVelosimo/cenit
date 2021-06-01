@@ -1,7 +1,6 @@
 FROM 874166547043.dkr.ecr.us-east-2.amazonaws.com/cenit-upgrade-base:upgrade.io.latest
 
-#RUN git clone --single-branch --branch upgrading https://github.com/cenit-io/cenit.git /var/www/cenit
-RUN git clone --single-branch --branch upgrading https://testCenitUpgradeVelosimo:YnSdS3j4isHELtMhlZR0Yagdx5TwJ*12@github.com/testCenitUpgradeVelosimo/cenit.git /var/www/cenit
+COPY . /var/www/cenit
 
 WORKDIR /var/www/cenit
 
