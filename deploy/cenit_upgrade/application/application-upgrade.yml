@@ -1,0 +1,4 @@
+'Setup::SystemNotification:attachment:uploader': EmbeddedUploader
+'Setup::Execution:attachment:uploader': EmbeddedUploader
+
+'Cenit::Admin:default_uri' : "http://cenit-ui-upgrade.velosimo.io"
