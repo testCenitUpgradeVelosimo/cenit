@@ -11,6 +11,11 @@ RUN mkdir -p /var/www/shared/sockets
 ENV RAILS_ENV='production'
 ENV RACK_ENV='production'
 ENV UNICORN_CENIT_SERVER=true
+ENV SKIP_DB_INITIALIZATION=true
+ENV SKIP_RABBIT_MQ=true
+ENV LOOKUP_SCHEDULER_OFF=true
+
+RUN rake assets:precompile
 
 RUN gem install bundler:1.17.3
 
