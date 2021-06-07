@@ -17,8 +17,8 @@ ENV LOOKUP_SCHEDULER_OFF=true
 
 RUN gem install bundler:1.17.3
 
-RUN rake assets:precompile
-
 RUN bundle update mimemagic
 
 RUN bundle install --jobs 20 --retry 5 --without development test
+
+RUN rake assets:precompile
