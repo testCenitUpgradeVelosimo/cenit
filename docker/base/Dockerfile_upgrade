@@ -3,7 +3,7 @@ FROM drecom/centos-base:7 AS rubybuild
 RUN git clone git://github.com/rbenv/ruby-build.git /usr/local/plugins/ruby-build \
 &&  /usr/local/plugins/ruby-build/install.sh
 RUN yum -y install jemalloc-devel
-RUN RUBY_CONFIGURE_OPTS=--with-jemalloc ruby-build 2.7 /usr/local/
+RUN RUBY_CONFIGURE_OPTS=--with-jemalloc ruby-build 2.7.7 /usr/local/
 
 #------------------------------------------------------------------------
 #------------------------------------------------------------------------
