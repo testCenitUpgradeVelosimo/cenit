@@ -3,12 +3,12 @@ production:
     default:
       database: 'velosimo'
       hosts:
-        - 'deviotestmongov4-shard-00-00.uzroj.mongodb.net:27017'
-        - 'deviotestmongov4-shard-00-01.uzroj.mongodb.net:27017'
-        - 'deviotestmongov4-shard-00-02.uzroj.mongodb.net:27017'
+        - 'deviotestmongov4-4-shard-00-00.uzroj.mongodb.net:27017'
+        - 'deviotestmongov4-4-shard-00-01.uzroj.mongodb.net:27017'
+        - 'deviotestmongov4-4-shard-00-02.uzroj.mongodb.net:27017'
       options:
         user: 'velosimo'
         password: 'v$Elosimo!'
         auth_source: 'admin'
         ssl: true
-        replica_set: 'atlas-37zpp4-shard-0'
+        replica_set: 'atlas-hws35l-shard-0'
