@@ -20,6 +20,3 @@ RUN gem install bundler
 RUN bundle update mimemagic
 
 RUN bundle install --jobs 20 --retry 5 --without development test
-
-RUN set -x; \
-   bundle exec rake assets:precompile
