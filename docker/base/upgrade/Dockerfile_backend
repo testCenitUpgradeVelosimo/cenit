@@ -1,0 +1,22 @@
+FROM 874166547043.dkr.ecr.us-east-2.amazonaws.com/cenit-upgrade-base:upgrade.io.latest
+
+COPY . /var/www/cenit
+
+WORKDIR /var/www/cenit
+
+RUN mkdir -p /var/www/shared/log
+RUN mkdir -p /var/www/shared/pids
+RUN mkdir -p /var/www/shared/sockets
+
+ENV RAILS_ENV='production'
+ENV RACK_ENV='production'
+ENV UNICORN_CENIT_SERVER=true
+ENV SKIP_DB_INITIALIZATION=true
+ENV SKIP_RABBIT_MQ=true
+ENV LOOKUP_SCHEDULER_OFF=true
+
+RUN gem install bundler
+
+RUN bundle update mimemagic
+
+RUN bundle install --jobs 20 --retry 5 --without development test
