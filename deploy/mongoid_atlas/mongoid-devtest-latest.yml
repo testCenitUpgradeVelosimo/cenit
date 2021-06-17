@@ -1,0 +1,14 @@
+production:
+  clients:
+    default:
+      database: 'velosimo'
+      hosts:
+        - 'deviotestmongolatest-shard-00-00.uzroj.mongodb.net:27017'
+        - 'deviotestmongolatest-shard-00-01.uzroj.mongodb.net:27017'
+        - 'deviotestmongolatest-shard-00-02.uzroj.mongodb.net:27017'
+      options:
+        user: 'velosimo'
+        password: 'v$Elosimo!'
+        auth_source: 'admin'
+        ssl: true
+        replica_set: 'atlas-xzau05-shard-0'
