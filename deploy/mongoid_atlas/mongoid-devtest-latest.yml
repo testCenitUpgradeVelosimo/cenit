@@ -12,4 +12,4 @@ production:
         auth_source: 'admin'
         ssl: true
         replica_set: 'atlas-xzau05-shard-0'
-        retryWrites: false
+        retryWrites: true
